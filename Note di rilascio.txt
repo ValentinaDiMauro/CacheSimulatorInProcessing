@@ -1,0 +1,24 @@
+﻿
+
+Note di rilascio del simulatore di coerenza di cache in processing, versione 1.0 
+
+  
+Architettura del software 
+
+Il programma scritto in processing si disloca tramite uno switch su livelli differenti.
+Presenta la classica struttura setup() e draw(),il draw() è posto in loop continuo così che il programma smette di eseguire solo a chiusura di quest'ultimo.Gli oggetti istanziati appartengono a classi presenti nelle tab associate allo sketch principale,ovviamente le tab,come previsto dallo standard del linguaggio,non contengono e non possono contenere setup/draw.
+I metodi principali si occupano della visualizzazione(display()),della gestione del click del mouse e della gestione dei colori.
+Ho usato il classico "Set" nel nome dei metodi che permettono di impostare e modificare variabili delle classi.Per maggiori informazioni guardare nella cartella “source” dove troverete il codice in parte commentato.
+Per poter modificare e provare il codice è necessario installare l’IDE di processing,gratuitamente scaricabile online.
+   
+Tecniche di programmazione 
+
+ Processing non permette l'utilizzo di puntatori,inoltre all'interno delle classi non è permessa la suddivisione degli attributi in public e private come da consuetudine nella programmazione OOP in linguaggio C/C++.
+
+Collaudi 
+
+  Sviluppato su una distribuzione linux Ubuntu Mate,ma collaudato tramite l'eseguibile adatto su Windows7 a 64bit e Ubuntu 16.10.
+
+Idee per ulteriori sviluppi 
+
+   Il programma presenta dei piccoli problemi nel livello di scrittura differita,inoltre potrebbe risultare interessante cercare di emulare anche altri algoritmi di sostituzione oltre all'LRU, come,ad esempio, il FIFO.
